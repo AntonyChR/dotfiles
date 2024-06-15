@@ -1,0 +1,13 @@
+create: /etc/systemd/network/enp0s3.network
+
+[Match]
+Name=enp0s3
+[Network]
+DHCP=no
+Address=10.0.2.5/24
+Gateway=10.0.2.2
+DNS=8.8.8.8
+
+then: 
+systemctl restart systemd-networkd
+systemctl enable systemd-networkd

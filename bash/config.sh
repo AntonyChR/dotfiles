@@ -24,13 +24,13 @@ git_info(){
 PS1='\e[34m\w \e[0m\e[38;5;166m$(git_info)\n\[\033[0;32m\] ▶\[\033[0m\] '
 
 # public paths 
-export PATH=$PATH:/home/ivan/config/scripts
-export PATH=$PATH:/home/ivan/bin
+export PATH=$PATH:/home/$USER/config/scripts
+export PATH=$PATH:/home/$USER/bin
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/ivan/go/bin
+export PATH=$PATH:/home/$USER/go/bin
 export PATH=$PATH:/usr/sbin
-export PATH="$PATH:/home/ivan/node/bin"
-export PATH="$PATH:/home/ivan/.local/bin"
+export PATH="$PATH:/home/$USER/node/bin"
+export PATH="$PATH:/home/$USERk/.local/bin"
 
 #Custom aliases
 alias stopContainers='docker stop $(docker ps -q)'

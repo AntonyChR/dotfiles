@@ -160,10 +160,10 @@ if [ -f "$node_file" ]; then
     rm -v $node_file
 fi
 
-echo "INSTALL RUST -------------------------------------------------------------"
+echo "INSTALL RUST ---------------------------------------------------------"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-echo "INSTALL RUST-ANALYZER ---------------------------------------------------"
+echo "INSTALL RUST-ANALYZER ------------------------------------------------"
 rustup component add rust-analyzer
 
 echo "INSTALL VSCODE--------------------------------------------------------"
@@ -172,6 +172,11 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 sudo apt update
 sudo apt install code -y
+
+echo "INSTALL KITTY TERMINAL-----------------------------------------------"
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+ln -s "$(pwd)/kitty.conf" ~/.config/kitty/kitty.conf 
+
 
 echo "INSTALL FONTS--------------------------------------------------------"
 mkdir -v ~/.fonts

@@ -38,6 +38,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'balanceiskey/vim-framer-syntax', { 'branch': 'main' }
 
 Plug 'wuelnerdotexe/vim-astro'
+
 call plug#end()
 "-------------------------------------------
 

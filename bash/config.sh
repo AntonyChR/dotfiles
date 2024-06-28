@@ -32,6 +32,9 @@ export PATH=$PATH:/usr/sbin
 export PATH="$PATH:/home/$USER/node/bin"
 export PATH="$PATH:/home/$USERk/.local/bin"
 
+# constants
+export EDITOR=vim
+
 #Custom aliases
 alias stopContainers='docker stop $(docker ps -q)'
 
@@ -39,19 +42,17 @@ alias gst='git status -s'
 alias gadd='git add .'
 alias gcom='git commit -m'
 alias glog='git log --oneline'
-alias gsync='git push --all'
+
 alias res='source ~/.bashrc'
 
 alias fe='dolphin'
+alias f='fzf --bind "enter:become($EDITOR {})" --height 90% --layout reverse --border --preview "cat {}"'
 alias cl='clear'
 alias vi='vim'
 alias cd..='cd ..'
 alias ll='lsd -l -F --hyperlink auto --color auto'
 alias rmf='rm -rf'
-alias restoreKeyboard='xset r rate 220 40'
 alias show='gwenview'
-
-alias connected='cat /sys/class/net/wlp2s0/operstate'
 
 alias tree='gio tree'
 alias trash='gio trash'

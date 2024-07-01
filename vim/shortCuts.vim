@@ -18,11 +18,8 @@ nmap <Leader>go <Plug>(coc-definition)
 
 nmap <Leader>gs :vsplit<CR><Plug>(coc-definition)
 
-nmap <Leader>rn <Plug>(coc-rename)
+nmap <F2> <Plug>(coc-rename)
 
 " open fzf
-nmap <Leader>fs :Files<CR>
+nmap <Leader>f :Files<CR>
 
-" ident
-nmap <silent>fd ggVG=
-nmap <silent>fl V=

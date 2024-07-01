@@ -4,8 +4,10 @@ set nowrap
 
 "activate external copy and paste
 set clipboard=unnamedplus
+set clipboard+=unnamed
 
 set nu
+set relativenumber 
 
 set backspace=indent,eol,start
 

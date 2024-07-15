@@ -21,7 +21,9 @@ git_info(){
   echo -e "${branch}${remote}${isModificated}${isCached}"
 }
 
-PS1='\e[34m\w \e[0m\e[38;5;166m$(git_info)\n\[\033[0;32m\] ▶\[\033[0m\] '
+#PS1='\e[34m[ \w ] \e[0m\e[38;5;166m$(git_info)\e[39m\n\e[38;5;197m$\e[0m '
+PS1='\[\e[34m\][ \w ] \[\e[0m\]\[\e[38;5;166m\]$(git_info)\[\e[39m\]\n\[\e[38;5;197m\]$\[\e[0m\] '
+
 
 # public paths 
 export PATH=$PATH:/home/$USER/config/scripts
@@ -30,7 +32,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/$USER/go/bin
 export PATH=$PATH:/usr/sbin
 export PATH="$PATH:/home/$USER/node/bin"
-export PATH="$PATH:/home/$USERk/.local/bin"
+export PATH="$PATH:/home/$USER/.local/bin"
 
 # constants
 export EDITOR=vim
@@ -40,7 +42,7 @@ alias stopContainers='docker stop $(docker ps -q)'
 
 alias gst='git status -s'
 alias gadd='git add .'
-alias gcom='git commit -m'
+alias gcom='git commit'
 alias glog='git log --oneline'
 
 alias res='source ~/.bashrc'
@@ -48,7 +50,7 @@ alias res='source ~/.bashrc'
 alias fe='dolphin'
 
 export FZF_DEFAULT_OPTS='--color=bg:#1B1D1E,border:#808080,spinner:#E6DB74,hl:#7E8E91,fg:#F8F8F2,header:#7E8E91,info:#A6E22E,pointer:#A6E22E,marker:#F92672,fg+:#F8F8F2,prompt:#F92672,hl+:#F92672'
-alias f='fzf --bind "enter:become($EDITOR {})" --height 90% --layout reverse --border --preview "cat {}"'
+alias f='fzf --bind "enter:become($EDITOR {})" --height 90% --layout reverse --border --preview "bat --color=always {}"'
 alias cl='clear'
 alias vi='vim'
 alias cd..='cd ..'

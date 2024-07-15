@@ -39,6 +39,8 @@ Plug 'balanceiskey/vim-framer-syntax', { 'branch': 'main' }
 
 Plug 'wuelnerdotexe/vim-astro'
 
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 call plug#end()
 "-------------------------------------------
 

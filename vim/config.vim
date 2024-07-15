@@ -3,8 +3,8 @@ set encoding=UTF-8
 set nowrap
 
 "activate external copy and paste
-set clipboard=unnamedplus
 set clipboard+=unnamed
+set clipboard=unnamedplus
 
 set nu
 set relativenumber 

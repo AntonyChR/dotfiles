@@ -4,6 +4,4 @@ for file in $vim_dir/*; do
     echo "source $file" >> ~/.vimrc
 done
 
-ECHO_GREEN "Vim files linked to .vimrc"
-
-
+echo "Vim files linked to .vimrc"

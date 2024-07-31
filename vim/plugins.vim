@@ -5,12 +5,10 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-"polygolt
-set nocompatible
+"polygolt set nocompatible
 
 "----------------PLUGINS-------------------
 call plug#begin('~/.vim/plugged')
-
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'alvan/vim-closetag'
@@ -41,6 +39,9 @@ Plug 'wuelnerdotexe/vim-astro'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+Plug 'habamax/vim-gruvbit'
+
+Plug 'liuchengxu/vista.vim'
 call plug#end()
 "-------------------------------------------
 
@@ -75,11 +76,12 @@ function! s:show_documentation()
 endfunction
 
 "define color of the autocomplete menu
-hi CocInfoFloat guifg=gray guibg=#201c1c
-
-
-colorscheme framer_syntax_dark
-"
+"hi CocInfoFloat guifg=gray guibg=#201c1c
+set termguicolors
+colorscheme gruvbit
+"--------- vista
+let g:vista#renderer#enable_icon = 1
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 "----->AIRLINETHEME
 let g:airline_symbols = {}
 let g:airline_theme = 'molokai' " Avaible themes => https://github.com/vim-airline/vim-airline/wiki/Screenshots

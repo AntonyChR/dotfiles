@@ -23,6 +23,8 @@ set expandtab
 set undodir=~/undoFilesVim
 set undofile
 
+set hlsearch
+
 "cursors
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
@@ -30,3 +32,7 @@ let &t_EI = "\e[2 q"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap <silent><expr> <C-x><C-z> coc#pum#visible() ? coc#pum#stop() : "\<C-x>\<C-z>"
 
+set cursorline
+
+
+set sidescroll=1

@@ -12,6 +12,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 " nerdtree
 nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>nv :Vista<CR>
 
 " coc
 nmap <Leader>go <Plug>(coc-definition)
@@ -22,4 +23,6 @@ nmap <F2> <Plug>(coc-rename)
 
 " open fzf
 nmap <Leader>f :Files<CR>
+
+nmap <Leader>d :CocList diagnostics<CR>
 

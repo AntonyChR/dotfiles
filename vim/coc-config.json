@@ -1,2 +1,10 @@
 {
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "colors.enable": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.floatConfig": {
+    "border": true,
+    "rounded": true
+  }
 }

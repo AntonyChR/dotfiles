@@ -39,8 +39,6 @@ Plug 'wuelnerdotexe/vim-astro'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-Plug 'habamax/vim-gruvbit'
-
 Plug 'liuchengxu/vista.vim'
 call plug#end()
 "-------------------------------------------
@@ -78,7 +76,10 @@ endfunction
 "define color of the autocomplete menu
 "hi CocInfoFloat guifg=gray guibg=#201c1c
 set termguicolors
-colorscheme gruvbit
+"colorscheme torte
+colorscheme slate 
+colorscheme quiet 
+
 "--------- vista
 let g:vista#renderer#enable_icon = 1
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]

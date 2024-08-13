@@ -43,8 +43,6 @@ INSTALL_DEB_PACKAGE() {
     fi
 }
 
-
-
 echo "INSTALL PACKAGES --------------------------------------------------------"
 
 # Update and upgrade
@@ -103,18 +101,8 @@ else
 fi
 
 echo "LINK FILES CONFIG --------------------------------------------------------"
-
-# LINK BASH CONFIG TO .bashrc
-bash_config_file="$(pwd)/bash/bashConfig"
-
-if [ -f ~/.bashrc ]; then
-    echo "source $bash_config_file" >> ~/.bashrc
-    ECHO_GREEN "bashConfig file linked to .bashrc"
-else
-    ECHO_RED "Error: .bashrc file not found"
-fi
-
-source ~/.bashrc
+./bash.sh
+./vim.sh
 
 go_site="https://go.dev/dl/"
 
@@ -137,9 +125,7 @@ else
     ECHO_RED "Error: Golang installation failed"
 fi
 
-
 echo "INSTALL NODEJS ----------------------------------------------------------"
-
 node_site="https://nodejs.org/dist/latest-v20.x/"
 node_file=$(curl -L $node_site | html2text | grep 'linux' | grep -v 'arm' | grep -o 'node.*\x64..xz')
 DOWNLOAD_FILE "$node_site$node_file" $node_file
@@ -164,10 +150,7 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
 sudo apt update
 sudo apt install code -y
 
-echo "INSTALL KITTY TERMINAL-----------------------------------------------"
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-ln -s "$(pwd)/kitty.conf" ~/.config/kitty/kitty.conf 
-
+./kitty.sh
 
 echo "INSTALL FONTS--------------------------------------------------------"
 mkdir -v ~/.fonts

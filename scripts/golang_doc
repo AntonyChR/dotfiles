@@ -1,0 +1,2 @@
+godoc -http=:6060
+wget -r -np -N -E -p -k http://localhost:6060/pkg/{package}

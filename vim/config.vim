@@ -1,10 +1,11 @@
 set encoding=UTF-8
 
-set nowrap
 
 "activate external copy and paste
 set clipboard+=unnamed
 set clipboard=unnamedplus
+set mouse=a
+set nowrap
 
 set nu
 set relativenumber 
@@ -13,12 +14,12 @@ set backspace=indent,eol,start
 
 filetype plugin indent on
 
-set tabstop=2
+set tabstop=4
 
 " when indenting with '>', use 4 spaces width
-set shiftwidth=2
+set shiftwidth=4
 " On pressing tab, insert 4 spaces
-set expandtab
+"set expandtab
 
 set undodir=~/undoFilesVim
 set undofile

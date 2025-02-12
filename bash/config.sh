@@ -36,6 +36,7 @@ export PATH="$PATH:/home/$USER/.local/bin"
 
 # constants
 export EDITOR=vim
+export TERM=kitty
 
 #Custom aliases
 alias stopContainers='docker stop $(docker ps -q)'
@@ -67,3 +68,6 @@ alias perm='echo -e "[0] No permission\n[1] Exec\n[2] Write\n[4] Read"'
 
 alias off="sudo shutdown now"
 alias server="hostname -I && python3 -m http.server 3000"
+alias re="redis-cli"
+alias tempdir="cd $(mktemp -d)"
+alias md="glow -w 80 -p"

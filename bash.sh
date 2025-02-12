@@ -1,5 +1,5 @@
 #!/bin/bash
-bash_config_file="$(pwd)/bash/bashConfig"
+bash_config_file="$(pwd)/bash/config.sh"
 
 if [ -f ~/.bashrc ]; then
     echo "source $bash_config_file" >> ~/.bashrc

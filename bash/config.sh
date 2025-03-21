@@ -21,7 +21,6 @@ git_info(){
   echo -e "${branch}${remote}${isModificated}${isCached}"
 }
 
-#PS1='\e[34m[ \w ] \e[0m\e[38;5;166m$(git_info)\e[39m\n\e[38;5;197m$\e[0m '
 PS1='\[\e[34m\][ \w ] \[\e[0m\]\[\e[38;5;166m\]$(git_info)\[\e[39m\]\n\[\e[38;5;197m\]$\[\e[0m\] '
 
 

@@ -159,4 +159,3 @@ sudo fc-cache -f -v
 
 # Print completion message
 ECHO_GREEN "Installation complete!"
-echo "Please rest your terminal to apply the changes."

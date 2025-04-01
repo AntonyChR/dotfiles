@@ -26,3 +26,5 @@ nmap <Leader>f :Files<CR>
 
 nmap <Leader>d :CocList diagnostics<CR>
 
+nmap <Leader>Y :'<,'>!wl-copy<CR>
+nmap <Leader>P :r!wl-paste<CR>

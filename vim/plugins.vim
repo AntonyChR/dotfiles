@@ -35,8 +35,6 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'balanceiskey/vim-framer-syntax', { 'branch': 'main' }
 
-Plug 'wuelnerdotexe/vim-astro'
-
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'liuchengxu/vista.vim'

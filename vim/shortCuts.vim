@@ -26,5 +26,6 @@ nmap <Leader>f :Files<CR>
 
 nmap <Leader>d :CocList diagnostics<CR>
 
+" Use these commands in case "Y" and "P" do not work
 nmap <Leader>Y :'<,'>!wl-copy<CR>
 nmap <Leader>P :r!wl-paste<CR>

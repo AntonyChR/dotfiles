@@ -70,3 +70,4 @@ alias server="hostname -I && python3 -m http.server 3000"
 alias re="redis-cli"
 alias tempdir="cd $(mktemp -d)"
 alias md="glow -w 100 -p"
+alias scan-repo="trufflehog git file://. --only-verified --no-update" # scans the current directory for secrets

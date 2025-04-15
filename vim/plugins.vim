@@ -74,16 +74,17 @@ endfunction
 "define color of the autocomplete menu
 "hi CocInfoFloat guifg=gray guibg=#201c1c
 set termguicolors
-"colorscheme torte
-colorscheme slate 
-colorscheme quiet 
+colorscheme torte
+
+"colorscheme quiet 
 
 "--------- vista
 let g:vista#renderer#enable_icon = 1
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 "----->AIRLINETHEME
 let g:airline_symbols = {}
-let g:airline_theme = 'molokai' " Avaible themes => https://github.com/vim-airline/vim-airline/wiki/Screenshots
+"let g:airline_theme = 'molokai' 
+let g:airline_theme = 'dark' " Avaible themes => https://github.com/vim-airline/vim-airline/wiki/Screenshots
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline#extensions#hunks#enabled = 1

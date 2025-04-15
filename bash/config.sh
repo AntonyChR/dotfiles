@@ -65,9 +65,30 @@ alias trans='~/config/scripts/tr.sh'
 
 alias perm='echo -e "[0] No permission\n[1] Exec\n[2] Write\n[4] Read"'
 
-alias off="sudo shutdown now"
 alias server="hostname -I && python3 -m http.server 3000"
 alias re="redis-cli"
 alias tempdir="cd $(mktemp -d)"
 alias md="glow -w 100 -p"
 alias scan-repo="trufflehog git file://. --only-verified --no-update" # scans the current directory for secrets
+
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+export ANDROID_HOME=~/Android/Sdk
+export ANDROID_NDK_HOME=~/Android/Sdk/ndk/29.0.13113456
+export PATH=$PATH:~/Android/Sdk/platform-tools
+export PATH=$PATH:~/Android/Sdk/emulator
+export PATH=$PATH:~/Android/Sdk/build-tools/35.0.1
+
+export PATH=$PATH:/opt/kotlinc/bin
+export PATH=$PATH:/opt/gradle/gradle-8.13/bin
+
+alias telegram="~/Descargas/Telegram/Telegram"
+
+alias studio="/opt/android-studio/bin/studio"
+
+alias idea="/opt/idea/bin/idea"
+
+

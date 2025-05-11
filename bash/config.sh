@@ -1,4 +1,4 @@
-export NODE_OPTIONS="--max-old-space-size=4096"git_info(){
+git_info(){
   branch="$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')"
 
   cached="$(git diff --name-only --cached 2> /dev/null | wc -l)"
@@ -75,7 +75,7 @@ alias scan-repo="trufflehog git file://. --only-verified --no-update" # scans th
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-
+#export NODE_OPTIONS="--max-old-space-size=4096"
 export ANDROID_HOME=~/Android/Sdk
 export ANDROID_NDK_HOME=~/Android/Sdk/ndk/29.0.13113456
 export PATH=$PATH:~/Android/Sdk/platform-tools
@@ -84,8 +84,6 @@ export PATH=$PATH:~/Android/Sdk/build-tools/35.0.1
 
 export PATH=$PATH:/opt/kotlinc/bin
 export PATH=$PATH:/opt/gradle/gradle-8.13/bin
-
-#export NODE_OPTIONS="--max-old-space-size=4096"
 
 alias telegram="~/Descargas/Telegram/Telegram"
 

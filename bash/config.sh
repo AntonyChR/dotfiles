@@ -1,4 +1,4 @@
-git_info(){
+export NODE_OPTIONS="--max-old-space-size=4096"git_info(){
   branch="$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')"
 
   cached="$(git diff --name-only --cached 2> /dev/null | wc -l)"
@@ -85,10 +85,13 @@ export PATH=$PATH:~/Android/Sdk/build-tools/35.0.1
 export PATH=$PATH:/opt/kotlinc/bin
 export PATH=$PATH:/opt/gradle/gradle-8.13/bin
 
+#export NODE_OPTIONS="--max-old-space-size=4096"
+
 alias telegram="~/Descargas/Telegram/Telegram"
 
 alias studio="/opt/android-studio/bin/studio"
 
 alias idea="/opt/idea/bin/idea"
 
+alias wind="windsurf"
 

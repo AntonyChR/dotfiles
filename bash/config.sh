@@ -23,6 +23,15 @@ git_info(){
 
 PS1='\[\e[34m\][ \w ] \[\e[0m\]\[\e[38;5;166m\]$(git_info)\[\e[39m\]\n\[\e[38;5;197m\]$\[\e[0m\] '
 
+server() {
+    LOCAL_ADDR="http://$(hostname -I | awk '{print $1}'):3000"
+    echo "$LOCAL_ADDR"
+    qr "$LOCAL_ADDR"
+    hostname -I 
+    python3 -m http.server 3000
+}
+
+
 
 # public paths 
 export PATH=$PATH:/home/$USER/config/scripts
@@ -31,6 +40,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/$USER/go/bin
 export PATH=$PATH:/usr/sbin
 export PATH="$PATH:/home/$USER/node/bin"
+export PATH="$PATH:/home/$USER/Descargas/zig"
 export PATH="$PATH:/home/$USER/.local/bin"
 
 # constants
@@ -65,7 +75,6 @@ alias trans='~/config/scripts/tr.sh'
 
 alias perm='echo -e "[0] No permission\n[1] Exec\n[2] Write\n[4] Read"'
 
-alias server="hostname -I && python3 -m http.server 3000"
 alias re="redis-cli"
 alias tempdir="cd $(mktemp -d)"
 alias md="glow -w 100 -p"
@@ -85,11 +94,15 @@ export PATH=$PATH:~/Android/Sdk/build-tools/35.0.1
 export PATH=$PATH:/opt/kotlinc/bin
 export PATH=$PATH:/opt/gradle/gradle-8.13/bin
 
+export RAYLIB_PATH=/home/ivan/raylib
 alias telegram="~/Descargas/Telegram/Telegram"
 
 alias studio="/opt/android-studio/bin/studio"
 
+alias gemi="gemini"
+
 alias idea="/opt/idea/bin/idea"
 
 alias wind="windsurf"
+
 

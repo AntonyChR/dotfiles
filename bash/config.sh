@@ -99,8 +99,6 @@ alias telegram="~/Descargas/Telegram/Telegram"
 
 alias studio="/opt/android-studio/bin/studio"
 
-alias gemi="gemini"
-
 alias idea="/opt/idea/bin/idea"
 
 alias wind="windsurf"

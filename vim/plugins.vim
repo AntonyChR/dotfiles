@@ -72,7 +72,7 @@ function! s:show_documentation()
 endfunction
 
 "define color of the autocomplete menu
-"hi CocInfoFloat guifg=gray guibg=#201c1c
+hi CocInfoFloat guifg=gray guibg=#201c1c
 set termguicolors
 colorscheme torte
 

@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# --- Color Definitions ---
+YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# --- Get Git Config ---
+user_name=$(git config user.name)
+user_email=$(git config user.email)
+
+# --- Display Formatted Message ---
+printf "${YELLOW}############################################################${NC}\n"
+printf "${YELLOW}#                                                          #${NC}\n"
+printf "${YELLOW}#        ATENCIÓN: Se usarán las siguientes credenciales   #${NC}\n"
+printf "${YELLOW}#                                                          #${NC}\n"
+printf "${YELLOW}############################################################${NC}\n\n"
+
+printf "  ${CYAN}Usuario :${NC} %s\n" "$user_name"
+printf "  ${CYAN}Email   :${NC} %s\n\n" "$user_email"
+
+# --- Confirmation Prompt ---
+printf "Presiona ${YELLOW}ENTER${NC} para confirmar o ctrl+c para cancelar... "
+
+# --- Read Input ---
+exec < /dev/tty
+read -r confirmation
+
+# --- Logic ---
+if [ -z "$confirmation" ]; then
+    echo "\n\nContinuando..."
+    exit 0
+else
+    echo "\n\nCommit cancelado por el usuario."
+    exit 1
+fi

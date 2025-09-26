@@ -76,7 +76,7 @@ hi CocInfoFloat guifg=gray guibg=#201c1c
 set termguicolors
 colorscheme torte
 
-"colorscheme quiet 
+colorscheme quiet 
 
 "--------- vista
 let g:vista#renderer#enable_icon = 1

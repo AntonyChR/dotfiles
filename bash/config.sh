@@ -103,4 +103,5 @@ alias idea="/opt/idea/bin/idea"
 
 alias wind="windsurf"
 
+alias tagsong="~/scripts/tag.sh"
 

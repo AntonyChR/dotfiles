@@ -39,4 +39,4 @@ set cursorline
 set sidescroll=1
 autocmd BufNew,BufRead *.asm set ft=nasm
 
-autocmd BufWritePre *.rs :call CocActionAsync('format')
+"autocmd BufWritePre *.rs :call CocActionAsync('format')
